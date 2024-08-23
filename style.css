@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap');
+
+:root {
+    --main-color: #3d1411;
+    --black: #000000;
+    --bg: #5d3e38; 
+    --menu-color: #aa7c7a; 
+    --border: .1rem solid rgba(0, 0, 0, 0.3);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: .5rem;
+}
+
+body {
+    background: var(--bg);
+    color: var(--black);
+}
+
+.header {
+    background: rgb(235, 235, 233,0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: var(--black);
+    font-weight: bolder;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+    font-weight: bolder;
+}
+
+.header .icons div {
+    color: var(--menu-color);
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--black);
+}
+
+#menu-btn {
+    font-size: 2rem;
+    color: var(--menu-color);
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.home {
+    background-image: url('../images/balooqqq.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home h1 {
+    color: var(--black);
+    font-size: 5rem;
+    text-align: center;
+}
+
+
+.photo-frame {
+    max-width: 70%;
+    height: 40vh; 
+    margin: 2rem auto;
+    border: 1rem solid #f5f5dc; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background-color: #f5f5dc;
+}
+
+.slider-container {
+    overflow: hidden;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.slide {
+    min-width: calc(33.3333% - 1rem); 
+    margin: 0 0.5rem; 
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 0.5rem;
+}
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: var(--black);
+    cursor: pointer;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    z-index: 10;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.prev {
+    left: -2rem; 
+}
+
+.next {
+    right: -2rem;
+}
+
+
+.prev:hover, .next:hover {
+    background-color: #3d1411;
+    color: white;
+}
+
+
+.prev:focus, .next:focus {
+    outline: none;
+}
+
+.secret {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.secret h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.secret .guess-container {
+    display: inline-block;
+    background-color: #f5f5dc;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.secret input, .secret button {
+    font-size: 1.8rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.secret button {
+    background-color: var(--main-color);
+    color: #f5f5dc;
+    border: none;
+    cursor: pointer;
+}
+
+.secret button:hover {
+    background-color: #3d1411;
+}
+
+#wishes {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.wishes h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.wishes textarea {
+    font-size: 1.8rem;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #f5f5dc;
+    width: 60%;
+    height: 200px;
+    box-sizing: border-box;
+    margin: 0 auto 2rem auto; 
+    display: block;
+}
+
+.wishes button {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    margin: 0 auto; 
+    display: block;
+}
+
+.wishes button:hover {
+    background-color: #3d1411;
+}
+
+#wishesList {
+    margin-top: 3rem;
+    text-align: left;
+    padding: 0 10%;
+}
+
+#wishesList p {
+    font-size: 1.6rem;
+    background-color: #f5f5dc;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 5rem; 
+        right: -100%;
+        width: 250px;
+        height: calc(100% - 5rem);
+        background-color: rgba(235, 235, 233, 0.3);
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        padding-top: 3rem; 
+        z-index: 1000;
+        transition: right 0.3s ease, opacity 0.3s ease; 
+        justify-content: flex-start; 
+        align-items: center; 
+        opacity: 0; 
+    }
+
+    .navbar.active {
+        right: 0; 
+        opacity: 1; 
+    }
+
+    .navbar a {
+        margin: 1.5rem 0; 
+        font-size: 2rem; 
+        color: var(--black);
+    }
+
+    #menu-btn {
+        display: block; 
+        position: fixed;
+        top: 1.5rem;
+        right: 2rem;
+        z-index: 1100; 
+        background: none; 
+        border: none; 
+        box-shadow: none; 
+    }
+}
+
+
+@media (min-width: 769px) {
+    #menu-btn {
+        display: none; 
+    }
+
+    .navbar {
+        display: flex; 
+        position: static; 
+        width: auto;
+        height: auto;
+        flex-direction: row; 
+        padding-top: 0; 
+        box-shadow: none;
+        opacity: 1; 
+    }
+
+    .navbar a {
+        margin: 0 1rem; 
+    }
+}
