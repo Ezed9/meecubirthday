@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#gallery">Photo Gallery</a>
+            <a href="#secret">Secret Message</a>
+            <a href="#wishes">Wishes</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+   <section id="home" class="home">
+   
+</section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="photo-frame">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide"><img src="images/cat1.jpg" alt="Image 1"></div>
+                    <div class="slide"><img src="images/cat2.jpg" alt="Image 2"></div>
+                    <div class="slide"><img src="images/cat3.jpg" alt="Image 3"></div>
+                    <div class="slide"><img src="images/cat4.jpg" alt="Image 4"></div>
+                    <div class="slide"><img src="images/cat5.jpg" alt="Image 5"></div>
+                </div>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Secret Message Section -->
+    <section id="secret" class="secret">
+        <h2>Guess the Age!</h2>
+        <div class="guess-container">
+            <input type="number" id="ageGuess" placeholder="Enter your guess">
+            <button onclick="checkAge()">Submit</button>
+        </div>
+        <p id="result"></p>
+    </section>
+
+    <!-- Wishes Section -->
+    <section id="wishes" class="wishes">
+        <h2>Leave Your Wish</h2>
+        <textarea id="wishText" placeholder="Write your wish here..."></textarea>
+        <button onclick="submitWish()">Submit Wish</button>
+        <div id="wishesList"></div>
+    </section>
+
+    <!-- Local JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
